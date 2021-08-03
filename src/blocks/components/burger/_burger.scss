@@ -1,9 +1,9 @@
 // Burger //
-$burger-bg: rgb(255, 255, 255);
-$burger-line-color: rgb(0, 0, 0);
+$burger-bg: transparent;
+$burger-line-color: rgb(255, 255, 255);
 
-$burger-width: 30px;
-$burger-height: 30px;
+$burger-width: 40px;
+$burger-height: 12px;
 $burger-border: none;
 $burger-padding: 0;
 $burger-transition: 0.3s;
@@ -37,6 +37,7 @@ $burger-line-after-translate: translate(0, 0);
   &::after {
     content: "";
     position: absolute;
+    border-radius: 1px;
     height: $burger-line-height;
     background-color: currentColor;
     transition: transform $burger-transition ease-in-out, top $burger-transition ease-in-out;
@@ -54,6 +55,7 @@ $burger-line-after-translate: translate(0, 0);
     transform: $burger-line-after-translate;
   }
   &__line {
+    display: none;
     position: absolute;
     left: $burger-line-left;
     top: $burger-line-top;

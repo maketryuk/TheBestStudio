@@ -1,0 +1,143 @@
+.blog {
+  .container {
+    padding: 0 70px;
+  }
+}
+
+// Table //
+.blog {
+  &-table {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 0 -60px;
+    margin-top: 55px;
+  }
+}
+
+// Card //
+.blog {
+  &-card {
+    flex: 0 0 50%;
+    padding: 45px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__image {
+      max-width: 586px;
+      max-height: 390px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-text {
+      margin-top: 40px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__title {
+      color: $color-white;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.2;
+      transition: all 0.3s ease-in-out;
+    }
+    &__description {
+      margin-top: 30px;
+      color: $color-white;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+    &:hover {
+      .blog-card__title {
+        color: $color-red;
+      }
+    }
+  }
+}
+
+// Media 1350px //
+@media screen and (max-width: 1350px) {
+  .blog {
+    .container {
+      padding: 0 15px;
+    }
+  }
+}
+
+// Media 1250px //
+@media screen and (max-width: 1250px) {
+  .blog {
+    &-card {
+      &__title {
+        font-size: 30px;
+      }
+      &__description {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// Media 991px //
+@media screen and (max-width: 991px) {
+  .blog {
+    padding-top: 97px;
+    &-table {
+      margin: 0 -30px;
+    }
+    &-card {
+      padding: 30px;
+    }
+  }
+}
+
+// Media 768px //
+@media screen and (max-width: 768px) {
+  .blog {
+    .container {
+      padding: 0;
+    }
+    .page__title {
+      margin-left: 15px;
+    }
+    &-table {
+      margin: 0;
+    }
+    &-card {
+      position: relative;
+      padding: 50px 15px;
+      flex: 0 0 100%;
+      &:not(:last-child) {
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $color-gray-light;
+        } 
+      }
+      &:first-child {
+        padding-top: 24px;
+      }
+      &__image {
+        max-width: 100%;
+        max-height: unset;
+        width: 100%;
+      }
+      &__title {
+        font-size: 24px;
+      }
+      &__description {
+        font-size: 14px;
+      }
+    }
+  }
+}

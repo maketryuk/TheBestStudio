@@ -1,0 +1,147 @@
+.error {
+  .container {
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Content //
+.error {
+  &-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cindie', sans-serif;
+    color: $color-white;
+    font-size: 150px;
+    font-weight: 400;
+  }
+  span {
+    color: $color-white;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+}
+
+.main__link {
+  display: flex;
+  align-items: center;
+  color: $color-white;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  .btn__circle {
+    margin-left: 30px;
+    width: 70px;
+    height: 70px;
+  }
+  .btn__arrow {
+    width: 26px;
+    left: 20px;
+    margin-bottom: 0;
+  }
+  &:hover {
+    .btn__circle {
+      width: 80px;
+      height: 80px;
+      border-color: $color-red;
+    }
+    .btn__arrow {
+      width: 80px;
+      background-color: $color-red;
+      &::before,
+      &::after {
+        background-color: $color-red;
+      }
+    }
+  }
+}
+
+// Media 991px //
+@media screen and (max-width: 991px) {
+  .error {
+    padding-top: 97px;
+  }
+}
+
+// Media 768px //
+@media screen and (max-width: 768px) {
+  .error {
+    &-content {
+      max-width: 550px;
+    }
+    &__title {
+      font-size: 100px;
+    }
+    span {
+      font-size: 30px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+// Media 600px //
+@media screen and (max-width: 600px) {
+  .error {
+    padding-bottom: 85px;
+    &-content {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 60px;
+    }
+    span {
+      font-size: 24px;
+      max-width: 200px;
+      text-align: center;
+    }
+    p {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  .main__link {
+    font-size: 14px;
+      .btn__circle {
+        width: 55px;
+        height: 55px;
+      }
+      .btn__arrow {
+        width: 20px;
+        left: 15px;
+      }
+      &:hover {
+        .btn__circle {
+          width: 65px;
+          height: 65px;
+        }
+        .btn__arrow {
+          width: 65px;
+        }
+      }
+  }
+}

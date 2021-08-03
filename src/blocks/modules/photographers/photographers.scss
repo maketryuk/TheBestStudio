@@ -1,0 +1,226 @@
+.photographers {
+  .container {
+    padding: 0 70px;
+  }
+}
+
+// Table //
+.photographers {
+  &-table {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 -20px;
+    margin-top: 100px;
+  }
+  &-wrapper {
+    flex: 0 0 25%;
+    padding: 20px;
+  }
+}
+
+// Card //
+.photographers-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  max-width: 291px;
+  height: fit-content;
+  &::before {
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: all 0.3s ease-in-out;
+  }
+  &__image {
+    max-width: 291px;
+    max-height: 590px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: $color-white;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    max-width: 140px;
+    transition: all 0.3s ease-in-out;
+  }
+  &__description {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 38%;
+    left: 30px;
+    right: 30px;
+    transform: translateY(-50%);
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    transition: all 0.3s ease-in-out;
+  }
+  &__btn {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    transition: all 0.3s ease-in-out;
+    .btn__circle {
+      width: 46px;
+      height: 46px;
+      border-width: 1px;
+    }
+    .btn__arrow {
+      width: 17px;
+      left: 13px;
+      height: 1px;
+      &::before,
+      &::after {
+        height: 1px;
+      }
+    }
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+    .photographers-card {
+      &__description,
+      &__btn {
+        opacity: 1;
+        visibility: visible;
+      }
+      &__title {
+        color: $color-red;
+      }
+      &__btn {
+        .btn__circle {
+          border-color: $color-red;
+        }
+        .btn__arrow {
+          background-color: $color-red;
+          &::before,
+          &::after {
+            background-color: $color-red;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media 1350px //
+@media screen and (max-width: 1350px) {
+  .photographers {
+    .container {
+      padding: 0 15px;
+    }
+    &-card {
+      &__title {
+        font-size: 30px;
+      }
+      &__description {
+        font-size: 16px;
+      }
+      &__btn {
+        bottom: 40px;
+      }
+    }
+  }
+}
+
+// Media 1250px //
+@media screen and (max-width: 1250px) {
+  .photographers {
+    &-card {
+      &__title {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+// Media 1050px //
+@media screen and (max-width: 1050px) {
+  .photographers {
+    &-wrapper {
+      flex: 0 0 33.3333%;
+    }
+  }
+}
+
+// Media 991px //
+@media screen and (max-width: 991px) {
+  .photographers {
+    padding-top: 97px;
+    &-table {
+      margin-top: 30px;
+    }
+  }
+}
+
+// Media 768px //
+@media screen and (max-width: 768px) {
+  .photographers {
+    &-wrapper {
+      flex: 0 0 50%;
+    }
+    &-card {
+      max-width: 100%;
+      max-height: 500px;
+      &__image {
+        max-width: unset;
+        width: 100%;
+        max-height: unset;
+        max-height: 500px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+// Media 600px //
+@media screen and (max-width: 600px) {
+  .photographers {
+    &-table {
+      margin: 0 -10px;
+    }
+    &-wrapper {
+      padding: 10px;
+    }
+  }
+}
+
+// Media 480px //
+@media screen and (max-width: 480px) {
+  .photographers {
+    &-table {
+      margin: 0;
+    }
+    &-wrapper {
+      flex: 0 0 100%;
+      padding: 25px 0;
+    }
+    &-card {
+      &__title {
+        font-size: 30px;
+      }
+    }
+  }
+}

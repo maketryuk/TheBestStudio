@@ -1,5 +1,68 @@
 <footer class="footer">
-  <div class="container footer-container">
-    
+  <div class="container">
+    <div class="footer__title">
+      <a href="index.html" class="page__title">The Best Studio</a>
+    </div>
+    <div class="footer-wrapper">
+      <ul class="footer-list">
+        <li class="footer__item">
+          <a href="about.html" class="footer__link">About us</a>
+        </li>
+        <li class="footer__item dropdown">
+            <div class="dropdown-wrapper dropdown__trigger">
+              <a href="studios.html" class="footer__link">Our Studios</a>
+              <i class="icon-arrow-down"></i>
+            </div>
+            <div class="dropdown-list" style="display: none;">
+              <a href="studio-first.html" class="dropdown__link">Studio 1</a>
+              <a href="studio-second.html" class="dropdown__link">Studio 2</a>
+              <a href="studio-third.html" class="dropdown__link">Studio 3</a>
+              <a href="studio-fourth.html" class="dropdown__link">Studio 4</a>
+            </div>
+        </li>
+        <li class="footer__item">
+          <a href="photographers.html" class="footer__link">Photographers</a>
+        </li>
+        <li class="footer__item">
+          <a href="blog.html" class="footer__link">Our Blog</a>
+        </li>
+        <li class="footer__item">
+          <a href="contact.html" class="footer__link">Contact</a>
+        </li>
+      </ul>
+      <div class="footer-list">
+        <a href="#" class="social__link">Instagram</a>
+        <a href="#" class="social__link">Facebook</a>
+        <a href="#" class="social__link">Twitter</a>
+      </div>
+      <div class="footer-adress">
+        <span>
+          18 High Street
+          <br>London
+          <br>SE65 7XY
+        </span>
+        <a href="mailto:" class="footer__link">best_progects@gmail.com</a>
+        <a href="tel:+442045773479" class="footer__link">+442045773479</a>
+      </div>
+    </div>
+    <div class="footer-wrapper">
+      <form class="contact-form">
+        <span class="contact-form__title">If you have any questions don’t hesitate to contact us</span>
+        <input type="text" name="contact-name" class="contact__option" placeholder="Name">
+        <input type="email" name="contact-email" class="contact__option" placeholder="Email">
+        <input type="tel" name="contact-number" class="contact__option" id="phone-number" placeholder="Phone Number">
+        <textarea name="contact-message" class="contact__option" placeholder="Message" maxlength="300"></textarea>
+        <button type="submit" class="contact__submit">
+          Submit
+          <div class="btn__circle">
+            <span class="btn__arrow"></span>
+          </div>
+        </button>
+      </form>
+    </div>
+    <div class="footer-copyright">
+      <a href="https://github.com/maketryuk" class="footer-author">Nikita Maketryuk</a>
+      <a href="https://www.behance.net/victorileontye1" class="footer-author">Victoria Leontyeva</a>
+    </div>
   </div>
 </footer>

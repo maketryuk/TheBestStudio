@@ -1,1 +1,52 @@
 // @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face("Cindie", "../fonts/Cindie2-Y", 400, normal);
+@include font-face("Electrolize", "../fonts/Electrolize-Regular", 400, normal);
+
+// IcoMoon //
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ghp3n1');
+  src:  url('../fonts/icomoon.eot?ghp3n1#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ghp3n1') format('truetype'),
+    url('../fonts/icomoon.woff?ghp3n1') format('woff'),
+    url('../fonts/icomoon.svg?ghp3n1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-prev-small:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-arrow-next-small:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-arrow-prev:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-arrow-next:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-arrow-down:before {
+  content: "\e902";
+  color: #fff;
+}
