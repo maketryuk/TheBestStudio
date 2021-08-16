@@ -2139,6 +2139,19 @@ li {
   line-height: 1.4;
 }
 
+.about-page .footer {
+  padding-top: 300px;
+}
+
+.pos-fixed {
+  position: fixed;
+}
+
+.stop {
+  position: absolute;
+  bottom: 0;
+}
+
 .about-list {
   position: relative;
   margin-top: 100px;
@@ -2159,6 +2172,10 @@ li {
 
 .about__item:not(:last-child) {
   margin-bottom: 70px;
+}
+
+.about__item:last-child {
+  height: 33px;
 }
 
 .about__year {
@@ -2577,16 +2594,19 @@ li {
 }
 
 .main__link {
+  position: relative;
   display: flex;
   align-items: center;
   color: white;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.2;
+  padding-right: 100px;
 }
 
 .main__link .btn__circle {
-  margin-left: 30px;
+  position: absolute;
+  right: 0;
   width: 70px;
   height: 70px;
 }
@@ -3081,6 +3101,10 @@ li {
     margin-left: 65px;
   }
 
+  .about__item:last-child {
+    height: 30px;
+  }
+
   .photographers .container {
     padding: 0 15px;
   }
@@ -3433,6 +3457,10 @@ li {
     margin-left: 59px;
   }
 
+  .about__item:last-child {
+    height: 28px;
+  }
+
   .photographers-wrapper {
     flex: 0 0 33.3333%;
   }
@@ -3465,6 +3493,7 @@ li {
   }
 
   .header {
+    margin: 0;
     z-index: 50;
     position: fixed;
     top: 0;
@@ -3799,6 +3828,10 @@ li {
     max-width: 90%;
   }
 
+  .about-page .footer {
+    padding-top: 200px;
+  }
+
   .photographers {
     padding-top: 97px;
   }
@@ -3956,6 +3989,12 @@ li {
     margin-bottom: 50px;
   }
 
+  .about__item:last-child {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
   .about__description,
   .about__image {
     margin-left: 0;
@@ -3967,6 +4006,10 @@ li {
 
   .about__description {
     max-width: 100%;
+  }
+
+  .about-page .footer {
+    padding-top: 65px;
   }
 
   .photographers-wrapper {
@@ -4130,6 +4173,7 @@ li {
 
   .main__link {
     font-size: 14px;
+    padding-right: 85px;
   }
 
   .main__link .btn__circle {
